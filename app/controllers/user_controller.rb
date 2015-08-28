@@ -9,7 +9,7 @@ post '/login' do
 
   if(user && user.password == params[:password])
     auth_login(user)
-  redirect "/users/#{user.id}/surveys"
+  redirect "/surveys"
   else
     @form_error = "Incorrect username or password"
     erb :index
@@ -24,7 +24,7 @@ post '/signup' do
 
   if @user.save
     auth_login(@user)
-  redirect "/users/#{@user.id}/surveys"
+  redirect "/surveys"
   else
     @form_error = "Unable to register"
     erb :index

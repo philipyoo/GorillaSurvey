@@ -2,13 +2,12 @@
 
 #form for creating new survey
 
-<form action="/surveys/new" method="post
-">
+<form action="/users/<%= @current_user.id %>/surveys" method="post">
      <div class="form-group">
         <label for="option1">Title</label>
         <input type="text" class="form-control" placeholder="Survey Title" name="title">
     </div>
-    <div class="form-group" action="/surveys/new" method="POST">
+    <div class="form-group">
         <label for="surveyQuestion">Survey Question</label>
         <input type="text" class="form-control" id="surveyq" placeholder="Ask your survey question here" name="description">
     </div>

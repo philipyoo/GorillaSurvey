@@ -1,6 +1,6 @@
 
 
-get '/users/:user_id/surveys' do
+get '/surveys' do
   @current_user = auth_current_user
   erb :'surveys/index'
 end
@@ -10,7 +10,9 @@ get '/users/:user_id/surveys/new' do
   erb :'surveys/new'
 end
 
-post '/users/:user_id/surveys/new' do
+post '/users/:user_id/surveys' do
+  @current_user = auth_current_user
+
   survey = Survey.create(title: params[:title])
   question = survey.questions.create(description: params[:description])
   question.choices.create(option: params[:option1])
@@ -18,9 +20,10 @@ post '/users/:user_id/surveys/new' do
   question.choices.create(option: params[:option3])
   question.choices.create(option: params[:option4])
 
-  redirect "/users/#{@current_user.id}/surveys"
-end
 
+
+  redirect "/surveys"
+end
 
 
 
