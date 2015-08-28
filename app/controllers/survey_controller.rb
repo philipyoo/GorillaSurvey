@@ -1,14 +1,16 @@
 
 
-get '/surveys' do
+get '/users/:user_id/surveys' do
+  @current_user = auth_current_user
   erb :'surveys/index'
 end
 
-get '/surveys/new' do
+get '/users/:user_id/surveys/new' do
+  @current_user = auth_current_user
   erb :'surveys/new'
 end
 
-post '/surveys/new' do
+post '/users/:user_id/surveys/new' do
   survey = Survey.create(title: params[:title])
   question = survey.questions.create(description: params[:description])
   question.choices.create(option: params[:option1])
@@ -16,9 +18,7 @@ post '/surveys/new' do
   question.choices.create(option: params[:option3])
   question.choices.create(option: params[:option4])
 
-
-  #grab info from surveys/new form and save to db
-  redirect '/surveys'
+  redirect "/users/#{@current_user.id}/surveys"
 end
 
 
