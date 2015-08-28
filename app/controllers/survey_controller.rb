@@ -14,7 +14,8 @@ end
 
 get '/users/:user_id/surveys/new' do
   @current_user = auth_current_user
-  erb :'surveys/new'
+  # erb :'surveys/new'
+    (erb :'surveys/_new_survey', layout: false).to_json
 end
 
 post '/users/:user_id/surveys' do

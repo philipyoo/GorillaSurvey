@@ -1,6 +1,7 @@
-# show all surveys
 
-<a href="/users/<%= @current_user.id %>/surveys/new">Create New Survey</a>
+<div class='new_survey'>
+<a id='new-survey-button' href="/users/<%= @current_user.id %>/surveys/new">Create New Survey</a>
+</div>
 
 <% Survey.all.each do |survey| %>
   <div><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></div>

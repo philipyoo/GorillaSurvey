@@ -5,7 +5,9 @@ body {
     line-height: 160%;
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: #eee;
+    background-image: url("/css/jungle-bg.jpg");
+    background-size: cover;
+/*    background-color: #eee;*/
 }
 
 h1, h2, h3, h4, h5, h6 {font-family: Georgia; line-height:100%; margin-top: 0.5em; margin-bottom: 0.5em; color: #36AECC; font-style: italic; font-weight: 400;}
@@ -141,4 +143,12 @@ code {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+body {
+  background-image: ('scroll.jpg');
 }
