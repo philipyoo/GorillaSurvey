@@ -149,6 +149,6 @@ code {
   display: none;
 }
 
-body {
-  background-image: ('scroll.jpg');
+.form-control {
+  margin: 5px;
 }
