@@ -1,0 +1,14 @@
+
+
+<div>Title: <%= @survey.title %></div>
+
+<div>
+  <% @question.each do |q| %>
+    Question: <%= q.description %>
+    <% q.choices.each do |c| %>
+      <div>Option: <%= c.option %></div>
+    <% end %>
+  <% end %>
+
+</div>
+

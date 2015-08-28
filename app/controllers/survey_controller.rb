@@ -5,6 +5,13 @@ get '/surveys' do
   erb :'surveys/index'
 end
 
+get '/surveys/:id' do
+  @current_user = auth_current_user
+  @survey = Survey.find(params[:id])
+  @question = @survey.questions
+  erb :'surveys/show'
+end
+
 get '/users/:user_id/surveys/new' do
   @current_user = auth_current_user
   erb :'surveys/new'

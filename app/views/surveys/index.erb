@@ -3,5 +3,5 @@
 <a href="/users/<%= @current_user.id %>/surveys/new">Create New Survey</a>
 
 <% Survey.all.each do |survey| %>
-  <div><%= survey.title %></div>
+  <div><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></div>
 <% end %>
