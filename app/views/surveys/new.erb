@@ -2,26 +2,31 @@
 
 #form for creating new survey
 
-<form>
+<form action="/surveys/new" method="post
+">
+     <div class="form-group">
+        <label for="option1">Title</label>
+        <input type="text" class="form-control" placeholder="Survey Title" name="title">
+    </div>
     <div class="form-group" action="/surveys/new" method="POST">
         <label for="surveyQuestion">Survey Question</label>
-        <input type="question" class="form-control" id="surveyq" placeholder="Ask your survey question here">
+        <input type="text" class="form-control" id="surveyq" placeholder="Ask your survey question here" name="description">
     </div>
     <div class="form-group">
         <label for="option1">Answer choice</label>
-        <input type="option" class="form-control" placeholder="1st option">
+        <input type="text" class="form-control" placeholder="1st option" name="option1">
     </div>
         <div class="form-group">
         <label for="option2">Answer choice</label>
-        <input type="option" class="form-control" placeholder="2nd option">
+        <input type="text" class="form-control" placeholder="2nd option" name="option2">
     </div>
     <div class="form-group">
         <label for="option3">Answer choice</label>
-        <input type="option" class="form-control" placeholder="3rd option">
+        <input type="text" class="form-control" placeholder="3rd option" name="option3">
     </div>
     <div class="form-group">
         <label for="option4">Answer choice</label>
-        <input type="option" class="form-control"  placeholder="4th option">
+        <input type="text" class="form-control"  placeholder="4th option" name="option4">
     </div>
     <div class="checkbox">
     </div>
