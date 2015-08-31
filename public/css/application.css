@@ -50,7 +50,7 @@ a:visited {
 }
 
 a:hover {
-    color: #000;
+    color: #FFF;
     text-decoration: underline;
 }
 
@@ -74,6 +74,17 @@ code {
     line-height: 1.4em;
     margin-left: -1em;
     overflow: auto;
+}
+
+div.container {
+  background-color: black;
+  opacity: 0.3;
+  /*color: white;*/
+}
+
+label {
+  color:white;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .form-signin {
@@ -150,5 +161,5 @@ code {
 }
 
 .form-control {
-  margin: 5px;
+  margin: 1px 0px;
 }
