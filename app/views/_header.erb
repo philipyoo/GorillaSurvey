@@ -1,7 +1,11 @@
-<div style="float:left; width: 40%; margin: 10px;">
-  <a href="/surveys">Back</a>
-</div>
 
-<div style="float:right; width: 40%; margin: 10px;">
-  <a href="/logout">Logout</a>
-</div>
+
+<% if !auth_logged_in? %>
+  <div style="float:left; width: 40%; margin: 10px;">
+    <a href="/surveys">Back</a>
+  </div>
+
+  <div style="float:right; width: 40%; margin: 10px;">
+    <a href="/logout">Logout</a>
+  </div>
+<% end %>
